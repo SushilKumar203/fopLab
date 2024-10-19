@@ -1,0 +1,50 @@
+//If Statement
+#include <stdio.h>
+
+int main() {
+    int age = 18;
+    
+    if (age >= 18) {
+        printf("You are eligible to vote.\n");
+    }
+    
+    return 0;
+}
+
+//Else If Statement
+#include <stdio.h>
+
+int main() {
+    int age = 17;
+    
+    if (age >= 18) {
+        printf("You are eligible to vote.\n");
+    } else if (age == 17) {
+        printf("You can vote next year.\n");
+    } else {
+        printf("You are too young to vote.\n");
+    }
+    
+    return 0;
+}
+
+//Nested 
+#include <stdio.h>
+
+int main() {
+    int number = 15;
+
+    if (number > 0) {  // First condition: Is the number positive?
+        printf("The number is positive.\n");
+        
+        if (number % 2 == 0) {  // Nested condition: Is the number even?
+            printf("The number is even.\n");
+        } else {  // If the number is not even, it must be odd
+            printf("The number is odd.\n");
+        }
+    } else {  // If the number is not positive, it must be zero or negative
+        printf("The number is zero or negative.\n");
+    }
+
+    return 0;
+}
