@@ -1,0 +1,61 @@
+1. Implicit Type Conversion (Automatic Type Conversion):
+Implicit conversion happens automatically when you assign a value of one data type to a variable of another data type without explicitly casting it. The compiler converts the data type for you, typically converting smaller types to larger types (e.g., int to float).
+
+//Code
+Example 1: Implicit Conversion from int to float
+#include <stdio.h>
+
+int main() {
+    int a = 10;
+    float b;
+    
+    b = a;  // Implicit conversion from int to float
+    printf("Value of b: %f\n", b);  // Output: 10.000000
+    
+    return 0;
+}
+
+//
+Example 2: Implicit Conversion from float to int
+#include <stdio.h>
+
+int main() {
+    float a = 5.75;
+    int b;
+    
+    b = a;  // Implicit conversion from float to int (losing decimal part)
+    printf("Value of b: %d\n", b);  // Output: 5
+    
+    return 0;
+}
+
+
+Explicit conversion
+Explicit conversion happens when you manually convert a value from one type to another using casting. This is necessary when you want to override the default conversion rules or avoid data loss.
+
+Example 1: Explicit Conversion from float to int
+#include <stdio.h>
+
+int main() {
+    float a = 9.99;
+    int b;
+    
+    b = (int) a;  // Explicit conversion from float to int
+    printf("Value of b: %d\n", b);  // Output: 9
+    
+    return 0;
+}
+
+Example 2: Explicit Conversion from int to float
+#include <stdio.h>
+
+int main() {
+    int a = 5;
+    float b;
+    
+    b = (float) a;  // Explicit conversion from int to float
+    printf("Value of b: %f\n", b);  // Output: 5.000000
+    
+    return 0;
+}
+
