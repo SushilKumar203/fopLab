@@ -1,0 +1,107 @@
+//ATM
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int num1, amountwithdraw, billrupees, depositrupees, remainingAmount = 1000;
+
+    printf("Welcome to Szabist ATM:\n");
+    printf("1: Withdraw \n");
+    printf("2: Check Balance \n");
+    printf("3: Pay bill \n");
+    printf("4: Deposit \n");
+    printf("Enter your choice \n");
+    scanf("%d", &num1);
+
+    if (num1 == 1) {
+        printf("Enter the amount you want to withdraw: \n");
+        scanf("%d", &amountwithdraw);
+        while (amountwithdraw < 0 || amountwithdraw > remainingAmount) {
+            printf("Invalid amount. Enter a positive amount not exceeding your balance: ");
+            scanf("%d", &amountwithdraw);
+        }
+        remainingAmount -= amountwithdraw;
+        printf("Withdraw successful:\nYour remaining amount is %d\n", remainingAmount);
+    } else if (num1 == 2) {
+        printf("The amount of rupees in your account: %d\n", remainingAmount);
+    } else if (num1 == 3) {
+        printf("Enter your bill payment rupees: ");
+        scanf("%d", &billrupees);
+        while (billrupees < 0 || billrupees > remainingAmount) {
+            printf("Invalid amount. Enter a positive amount not exceeding your balance: ");
+            scanf("%d", &billrupees);
+        }
+        remainingAmount -= billrupees;
+        printf("Bill paid successfully:\nThe remaining amount in your account: %d\n", remainingAmount);
+    } else if (num1 == 4) {
+        printf("Enter the amount you are depositing: ");
+        scanf("%d", &depositrupees);
+        while (depositrupees < 0) {
+            printf("Invalid amount. Enter a positive amount: ");
+            scanf("%d", &depositrupees);
+        }
+        remainingAmount += depositrupees;
+        printf("%d Amount added successfully. New balance: %d\n", depositrupees, remainingAmount);
+    } else {
+        printf("Wrong option selected.\n");
+    }
+
+    return 0;
+}
+
+
+
+//version #2
+/
+/
+/
+/#include <stdio.h>
+//#include <stdlib.h>
+//
+///* run this program using the console pauser or add your own getch, system("pause") or input loop */
+//
+//int main() {
+// int num1, amountwithdraw, billrupees, rem1, rem2, depositrupees, add;
+// int amount=1000;
+// printf("Welcome to Szabist ATM:\n");
+// printf("1: Withdraw \n");
+// printf("2: Check Balance \n");
+// printf("3: Pay bill \n");
+// printf("4: Deposit \n");
+// printf("Enter your choice \n");
+// scanf("%d", &num1);
+//
+// if(num1==1){
+// printf("Enter the amount you want to withdraw: \n");
+// scanf("%d", &amountwithdraw);
+// while(amountwithdraw<0){
+// printf("Value have to be +ve ");
+// scanf("%d", &amountwithdraw);
+//
+// }
+// printf("Withdraw successful:\n");
+// rem1=amount-amountwithdraw;
+// printf("your remaining amount is %d \n ",rem1 );
+// }else if(num1==2){
+// printf("The amount of rupees in your account %d ", amount );
+// }else if(num1==3){
+// printf("Enter your bill payment rupees:");
+// scanf("%d", &billrupees);
+// while(billrupees<0){
+// printf("Value have to be +ve ");
+// scanf("%d", &billrupees);
+ }
+// printf("Bill paid  successful:\n");
+// rem2=amount-billrupees;
+// printf("The remaining amount in your acc %d ",rem2 );
+// }else if(num1==4){
+// printf("Enter the amount you are depositing in your acc: ");
+// scanf("%d", &depositrupees);
+ add=depositrupees+amount;
+ printf(" %d Amount addded successful", add );
+ }else{
+ printf("wrong option selected");
+ }
+ return 0;
+}
