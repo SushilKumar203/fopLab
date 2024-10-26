@@ -1,0 +1,95 @@
+ ******************************************Day of week switch statements
+ #include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+	int dayofweek;
+	printf("Enter the day of week): ");
+	scanf("%d", &dayofweek);
+	switch(dayofweek) {
+		case 1:
+			printf("Monday\n");
+			break;
+		case 2:
+			printf("Tuesday\n");
+			break;
+		case 3:
+			printf("Wednesday\n");
+			break;
+		case 4:
+			printf("Thursday\n");
+			break;
+		case 5:
+			printf("Friday\n");
+			break;
+		case 6:
+			printf("Saturday\n");
+			break;
+		case 7:
+			printf("Sunday\n");
+			break;
+		default:
+			printf("Invalid day\n");
+			break;
+	}
+	
+	return 0;
+}
+ **********************************Claculator
+ #include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+	int num1, num2, solution;
+	char a;
+	
+	printf("Enter number one: ");
+	scanf("%d", &num1);
+	
+	printf("Enter number two: ");
+	scanf("%d", &num2);
+	
+
+	getchar();
+	
+	printf("Enter the operator (+, -, *, /): ");
+	scanf("%c", &a);
+	
+	switch(a) {
+		case '+':
+			solution = num1 + num2;
+			printf("Result: %d\n", solution);
+			break;
+		case '-':
+			while(num1<num2){
+				printf("Enter number one: ");
+				scanf("%d", &num1);
+	
+				printf("Enter number two: ");
+				scanf("%d", &num2);
+				
+			}
+			solution = num1 - num2;
+			printf("Result: %d\n", solution);
+			break;
+		case '*':
+			solution = num1 * num2;
+			printf("Result: %d\n", solution);
+			break;
+		case '/':
+			if(num2 != 0) {
+				solution = num1 / num2;
+				printf("Result: %d\n", solution);
+			} else {
+				printf("Error: Division by zero is not allowed.\n");
+			}
+			break;
+		default:
+			printf("Invalid operator\n");
+	}
+	
+	return 0;
+}
+
+
+ 
